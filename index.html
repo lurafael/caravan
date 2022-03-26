@@ -5,39 +5,64 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/bootstrap.css">
-  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
+  <title>Caravan</title>
 </head>
 <body>
-  <div class="container">
-    <div class="row">
-      <div class="col-6">
-        <h6>Teste</h6>
-        <div class="row">
-          <div class="button col-6">
-            <button class="btn btn-primary">Teste</button>
-          </div>
-          <div class="button col-6">
-            <button class="btn btn-secondary">Teste</button>
-          </div>
-        </div>
-      </div>
-      <div class="col-6">
-        <h6>Teste</h6>
-        <div class="row">
-     
-            <button class="btn btn-secondary col-3 border-right rounded-top">Teste</button>
-     
-       
-            <button class="btn btn-primary col-5">Teste</button>
-  
-       
-            <button class="btn btn-success col-3">Teste</button>
+  <!-- 
+      O navbar-expand-algumTamanho define a responsividade, nesse caso a partir do tamanho md ele mostra o menu normal.
+  -->
+  <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top py-3 box-shadow">
+    <a class="navbar-brand" href="index.html">
+      <img src="./img/caravan.svg" alt="Caravan">
+    </a>
 
-        </div>
-      </div>
+    <!-- 
+      Se o tamanho da tela for menor que "md", o botão abaixo pega todo o conteúdo do que estiver definido no "data-target" e esconde dentro do botão.
+    -->
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Abrir Navegação">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- 
+      - Com as classes "collapse navbar-collapse" estou dizendo que o conteúdo abaixo é quem vai ser escondido.
+      - Todas as classes possuem sua semântica, sendo ul navbar-nav, li nav-item e a nav-link.
+    -->
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a href="locais.html" class="nav-link">Locais</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Planos</a>
+          
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="local.html">California</a>
+            <a class="dropdown-item" href="local.html">Paris</a>
+            <a class="dropdown-item" href="local.html">Dublin</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a href="contato.html" class="nav-link">Contato</a>
+        </li>
+        <li class="nav-item">
+          <a href="login.html" class="nav-link">Login</a>
+        </li>
+        <li class="nav-item">
+            <!-- 
+              - Abaixo estilização do link é feita pegando a estilização do botão na documentação.
+              - Consigo adicionar a margin-left somente quando a tela tiver o tamanho que eu quero (md nesse caso), com tamanho padrão que vai de 0 a 5 (o 2 se encaixou melhor nesse caso).
+            -->
+            <a href="inscricao.html" class="btn btn-outline-primary ml-md-2">Inscreva-se</a>  
+        </li>
+      </ul>
     </div>
 
-  </div>
+  </nav>
+
   <script type="text/javascript" src="js/jquery-3.2.1.slim.min.js"></script>
   <script type="text/javascript" src="js/popper.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.js"></script>
